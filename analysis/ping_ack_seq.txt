@@ -1,0 +1,28 @@
+212  0.0.0.0:4999  :0  6  SendTo  
+0000  B2 80 B0 80 B1 80                                  ......
+
+213  :0  0.0.0.0:4999  6  RecvFrom  
+0000  B2 80 B1 80 B2 80                                  ......
+
+214  0.0.0.0:4999  :0  6  SendTo  
+0000  B3 80 B1 80 B2 80                                  ......
+
+215  :0  0.0.0.0:4999  6  RecvFrom  
+0000  B3 80 B2 80 B3 80                                  ......
+
+216  0.0.0.0:4999  :0  6  SendTo  
+0000  B4 80 B2 80 B3 80                                  ......
+
+
+
+Client: [new sequence:2][last sequence it sent:2][last sequence it got from the server:2]
+
+When the server or client sends data:
+
+Server: [new sequence:1 NO "80".][Data:x]
+Server: [last sequence it sent:2][last sequence it got from the client:2]
+Client: [new sequence:2][last sequence it sent:2][last sequence it got from the server:2]
+
+
+
+This acts as a ping/sequence/keep alive all in one.
